@@ -9,7 +9,7 @@ SpySense is an **AI-powered security dashboard** for ethical hacking, monitoring
 - **Keylogging:** Capture all keystrokes with timestamps for analysis.
 - **Process Detection:** Scan running processes for suspicious activity using `psutil`.
 - **System Info:** Monitor CPU, RAM, and process count in real time.
-- **Advanced Dashboard:** Animated, responsive React UI with hacker/cyberpunk theme, glitch effects, and collapsible sidebar.
+- **Advanced Dashboard:** Animated, responsive React UI with hacker/cyberpunk theme, glitch effects, and integrated sidebar navigation.
 - **Log Management:** Automatic log rotation and cleanup to maintain privacy and performance.
 
 ---
@@ -25,6 +25,7 @@ SpySense is an **AI-powered security dashboard** for ethical hacking, monitoring
 - **Frontend:**
   - React (Create React App)
   - react-icons (icons)
+  - Chart.js (system monitoring charts)
   - Custom CSS (cyberpunk/hacker theme)
 - **AI Integration:**
   - Google Gemini API (for log summarization)
@@ -44,11 +45,10 @@ spy-sense-2/
 │   ├── package.json       # Frontend dependencies and scripts
 │   └── src/
 │       ├── App.js         # Main React app
-│       ├── Dashboard.js   # Main dashboard logic/UI
-│       ├── Dashboard.css  # Dashboard styles
-│       ├── components/
-│       │   ├── Sidebar.js # Collapsible sidebar
-│       │   └── Sidebar.css# Sidebar styles
+│       ├── Dashboard.js   # Main dashboard with integrated sidebar and all features
+│       ├── Dashboard.css  # Dashboard styles with cyberpunk theme
+│       ├── index.js       # React entry point
+│       ├── index.css      # Global styles
 │       └── ...            # Other React files/assets
 ├── README.md              # Project documentation
 └── ...                    # .gitignore, venv, etc.
@@ -94,7 +94,7 @@ npm start
 - **Logs:** View raw keylog data (last 50 entries for privacy).
 - **Gemini Summary:** See AI-generated summaries of recent user activity (last 100 keystrokes).
 - **Detection:** Check for suspicious processes in real time.
-- **System Info:** Monitor CPU, RAM, and process count live.
+- **System Info:** Monitor CPU, RAM, and process count live with interactive charts.
 
 ---
 
@@ -109,6 +109,7 @@ npm start
 - **Log Management:** Implemented automatic log cleanup to maintain only recent entries
 - **Repository Setup:** Connected to GitHub repository for version control
 - **Privacy Enhancement:** Reduced log file size from 9,600+ entries to 50 entries
+- **Documentation Update:** Corrected project structure and removed outdated component references
 
 ---
 
