@@ -10,6 +10,7 @@ SpySense is an **AI-powered security dashboard** for ethical hacking, monitoring
 - **Process Detection:** Scan running processes for suspicious activity using `psutil`.
 - **System Info:** Monitor CPU, RAM, and process count in real time.
 - **Advanced Dashboard:** Animated, responsive React UI with hacker/cyberpunk theme, glitch effects, and collapsible sidebar.
+- **Log Management:** Automatic log rotation and cleanup to maintain privacy and performance.
 
 ---
 
@@ -32,12 +33,12 @@ SpySense is an **AI-powered security dashboard** for ethical hacking, monitoring
 
 ## 📁 Project Structure
 ```
-ethical-hacking/
+spy-sense-2/
 ├── backend/
 │   ├── app.py             # Flask backend (API, AI, keylogger, system info)
 │   ├── detector.py        # Process detection logic
 │   ├── keylogger.py       # Keylogger logic
-│   ├── logs.txt           # Log file (auto-generated)
+│   ├── logs.txt           # Log file (auto-generated, last 50 entries)
 │   └── requirements.txt   # Backend dependencies
 ├── frontend/
 │   ├── package.json       # Frontend dependencies and scripts
@@ -59,8 +60,8 @@ ethical-hacking/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/spy-sense.git
-cd spy-sense
+git clone https://github.com/tanishaaa17/ai-spy-sense.git
+cd ai-spy-sense
 ```
 
 ### 2. Configure Your Gemini API Key
@@ -90,12 +91,34 @@ npm start
 ---
 
 ## 🖥️ Dashboard Sections
-- **Logs:** View raw keylog data.
+- **Logs:** View raw keylog data (last 50 entries for privacy).
 - **Gemini Summary:** See AI-generated summaries of recent user activity (last 100 keystrokes).
 - **Detection:** Check for suspicious processes in real time.
 - **System Info:** Monitor CPU, RAM, and process count live.
 
 ---
 
+## 🔒 Privacy & Security
+- **Log Rotation:** The system automatically maintains only the last 50 log entries to ensure privacy.
+- **Local Processing:** All keylogging and processing happens locally on your machine.
+- **No Data Collection:** No user data is sent to external servers except for AI summarization requests.
+
+---
+
+## 📝 Recent Updates
+- **Log Management:** Implemented automatic log cleanup to maintain only recent entries
+- **Repository Setup:** Connected to GitHub repository for version control
+- **Privacy Enhancement:** Reduced log file size from 9,600+ entries to 50 entries
+
+---
+
 ## ⚠️ Disclaimer
-This project is for **educational and ethical research purposes only**. Do not use it for malicious activity. Always have permission before running keyloggers or process monitors on any system. 
+This project is for **educational and ethical research purposes only**. Do not use it for malicious activity. Always have permission before running keyloggers or process monitors on any system. The developers are not responsible for any misuse of this software.
+
+---
+
+## 🤝 Contributing
+Feel free to submit issues and enhancement requests!
+
+## 📄 License
+This project is licensed under the MIT License - see the LICENSE file for details. 
